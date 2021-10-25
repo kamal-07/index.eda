@@ -141,8 +141,39 @@ body{
     line-height: 23px;
 }
 
+.swiper{
+    position: relative;
+}
+
+.slider-buttons{
+    position: absolute;
+    right: 46px;
+    bottom: 40px;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    width: 100px;
+    justify-content: space-between;
+}
+
+.slider-button{
+    cursor: pointer;
+}
+
 .slide-summer{
     background-image:url("../img/slide-summer.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.slide-autumn{
+    background-image:url("../img/slide-autumm.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.slide-vitamin{
+    background-image:url("../img/slide-vitamin.png");
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -164,15 +195,17 @@ body{
     justify-content: space-between;
     padding-top: 50px;
     padding-bottom: 50px;
+    margin: -20px;
 }
 
 .card {
+    flex: 50%;
+    margin: 20px;
     position: relative;
     border-radius: 20px;
     overflow: hidden;
     padding: 32px;
     max-width: 570px;
-    width: 100%;
     min-height: 380px;
     display: flex;
     flex-direction: column;
@@ -243,6 +276,7 @@ body{
 .delivery-cards{
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     margin: -15px;
 }
 
@@ -459,4 +493,74 @@ body{
 .social-link{
     margin-left: 20px;
     text-decoration: none;
+}
+
+
+@media (max-width: 1260px) {
+    .container {
+        max-width: 960px;
+    }
+    .search-form{
+        margin-left: 40px;
+        margin-right: 40px;
+    }
+    .tabs-content{
+        flex-wrap: wrap;
+    }
+    .tabs-card{
+        /* flex: 50%; */
+        max-width: calc(50% - 30px);
+        margin-bottom: 5%;
+    }
+    .advantage-cards{
+        flex-wrap: wrap;
+        margin-bottom: 5%;
+    }
+    .advantage-card{
+        margin-bottom: 5%;
+    }
+}
+
+@media (max-width: 992px){
+    .container {
+        max-width: 750px;
+    }
+    .slide {
+        padding: 70px;
+    }
+    .delivery-card{
+        width: calc(50% - 30);
+    }
+    /* .footer-logo{
+        margin-right: 40px;
+    } */
+}
+
+@media (max-width: 768px){
+    .container{
+        max-width: 560px;
+    }
+    .header{
+        flex-wrap: wrap;
+    }
+    .search-form{
+        order: 1;
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+    .promo{
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 576px){
+    .container{
+        max-width: 90%;
+    }
+    .tabs-card{
+        max-width: 100%;
+    }
+    .advantage-cards{
+        justify-content: center;
+    }
 }
